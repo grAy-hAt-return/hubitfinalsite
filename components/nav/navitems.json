@@ -1,0 +1,34 @@
+[
+  {
+    "nav-item": "home",
+    "link": "/"
+  },
+  {
+    "nav-item": "About Us",
+    "link": "/About"
+  },
+  {
+    "nav-item": "Courses",
+    "link": "/courses"
+  },
+  {
+    "nav-item": "placement",
+    "link": "/Placement"
+  },
+  {
+    "nav-item": "Library",
+    "link": "/Library"
+  },
+  {
+    "nav-item": "corporate training",
+    "link": "/corporate_training"
+  },
+  {
+    "nav-item": "gallery",
+    "link": "/Gallery"
+  },
+  {
+    "nav-item": "Enquiry",
+    "link": "/enquiry"
+  }
+]

@@ -1,0 +1,255 @@
+$primaryColor: #a0047e;
+$primaryLight: rgba(2, 167, 217, 0.1);
+$Gray: #686868;
+$GrayD: #6a6363;
+$SecondaryColor: #ef3c23;
+$Dark: #0d0106;
+$GrayOne: #f9f9f9;
+$GrayTwo: #f2f2f2;
+$grayFour: #e3e3e3;
+$buttonone: #159996;
+
+.bg-primary {
+  background-color: $primaryColor;
+}
+.bg-primary-light {
+  background-color: $primaryLight;
+}
+
+.bg-gray {
+  background-color: $Gray;
+}
+.bg-grayOne {
+  background-color: $GrayOne;
+}
+.bg-grayTwo {
+  background-color: $GrayTwo;
+}
+.bg-grayFour {
+  background-color: $grayFour;
+}
+.bg-grayD {
+  background-color: $GrayD;
+}
+.border-primary {
+  border-color: $primaryColor;
+}
+.text-primary {
+  color: $primaryColor;
+}
+.bg-secondary {
+  background-color: $SecondaryColor;
+}
+.text-secondary {
+  color: $SecondaryColor;
+}
+.text-gray {
+  color: $Gray;
+}
+.text-grayD {
+  color: #686868;
+}
+.text-gray-dark {
+  color: $GrayD;
+}
+
+@mixin btn($bg, $color) {
+  background-color: $bg;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  padding: 8px 16px;
+  transition: all 0.2s;
+}
+.btn-primary {
+  @include btn($primaryColor, white);
+}
+.btn-Add {
+  @include btn($buttonone, white);
+}
+.btn-secondary {
+  @include btn($GrayD, black);
+}
+@mixin btn-outline($color, $border) {
+  border: 1px solid $border;
+  color: $color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-outline-primary {
+  @include btn-outline($primaryColor, $primaryColor);
+  cursor: pointer;
+}
+
+.btn-outline-secondary {
+  @include btn-outline($SecondaryColor, $SecondaryColor);
+  cursor: pointer;
+}
+.btn-outline-Gray {
+  @include btn-outline($Gray, $Gray);
+  cursor: pointer;
+}
+.card {
+  background-color: white;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+}
+
+.card-one {
+  background-color: white;
+  // border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.02);
+  padding: 1.5rem 2.5rem;
+}
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.OverViewButton {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  height: fit-content;
+  padding: 0.7rem 2rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 136, 144);
+  outline: 1px solid slategrey;
+}
+.scroll {
+  overflow-x: scroll;
+}
+.scroll::-webkit-scrollbar {
+  width: 0.08rem;
+}
+.scroll::-webkit-scrollbar-thumb {
+  // display: none;
+  background-color: $GrayD;
+  outline: 1px solid $GrayD;
+}
+#UserProfile::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  top: -19px;
+  right: 14px;
+  border: 10px solid transparent;
+  border-bottom-color: $GrayTwo;
+}
+input {
+  outline: none;
+}
+// default css for html elemets
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h4 {
+  display: block;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+h6 {
+  display: block;
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+.collapsible .content {
+  padding: 0rem;
+}
+.collapsible .content-parent {
+  height: 0px;
+  overflow: hidden;
+  transition: height ease-in-out 0.6s;
+}
+
+.gallery {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-width: 33%;
+  -moz-column-width: 33%;
+  column-width: 33%;
+  padding: 10px;
+}
+.gallery .pics {
+  position: relative !important;
+  -webkit-transition: all 350ms ease;
+  transition: all 350ms ease;
+  cursor: pointer;
+  margin-bottom: 12px;
+  &:hover {
+    filter: opacity(0.8);
+  }
+}
+// @media (max-width: 991px) {
+//   .gallery {
+//     -webkit-column-count: 3;
+//     -moz-column-count: 3;
+//     column-count: 3;
+//   }
+// }
+// @media (max-width: 740px) {
+//   .gallery {
+//     -webkit-column-count: 2;
+//     -moz-column-count: 2;
+//     column-count: 2;
+//   }
+// }
